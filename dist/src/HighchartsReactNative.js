@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-    WebView,
     Text,
     View,
     Dimensions,
     StyleSheet
 } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 const win = Dimensions.get('window');
 const path = '../highcharts-files/';
@@ -116,6 +116,7 @@ export default class HighchartsReactNative extends React.PureComponent {
                 };
             };
             document.body.appendChild(hcScript);
+            true
         `;
     }
     render() {
